@@ -1,0 +1,15 @@
+{
+  "name": "sf-node-task-2024",
+  "version": "1.0.0",
+  "description": "Test task for candidates to winter SF practicum 2024",
+  "main": "calc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node calc.js"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}
