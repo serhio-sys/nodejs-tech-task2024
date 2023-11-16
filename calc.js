@@ -10,7 +10,9 @@ function grandTotal(donations) {
 	// 1) Calculate total amount of all donations and output it in the console
 	// 2) Define the 3 top donators. We should output their names and amount into the console in ascending order
 	let arrayWithoutDublicates = []
+	let sum = 0
 	donations.forEach(donation => {
+		sum += donation.amount
 		if (!arrayWithoutDublicates[donation.name]) {
 			arrayWithoutDublicates[donation.name] = { ...donation }
 		} 
@@ -24,10 +26,6 @@ function grandTotal(donations) {
 	})
 
 	const start_point = donations.length - 3 < 0 ? 0 : donations.length - 3 
-	let sum = 0
-	for (let i = 0; i < donations.length; i++) {
-		sum += donations[i].amount
-	}
 	
 	console.log("Total amount: "+sum+"\nTop donators: ")
 	let current_number = start_point == 0 ? donations.length : 3 
