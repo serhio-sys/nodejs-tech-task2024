@@ -23,14 +23,14 @@ function grandTotal(donations) {
 		return donationA.amount - donationB.amount
 	})
 
-	const start_point = donations.length - 3
+	const start_point = donations.length - 3 < 0 ? 0 : donations.length - 3 
 	let sum = 0
 	for (let i = 0; i < donations.length; i++) {
 		sum += donations[i].amount
 	}
 	
 	console.log("Total amount: "+sum+"\nTop donators: ")
-	let current_number = 3
+	let current_number = start_point == 0 ? donations.length : 3 
 	for (let i = start_point; i < donations.length; i++) {
 		console.log(`${current_number--}. ${donations[i].name} ${donations[i].amount}`)
 	}
